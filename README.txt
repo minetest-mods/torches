@@ -1,29 +1,22 @@
 Minetest mod "Torches"
 ======================
-Version: 3.0.1
+Version: 4
 
 (c) Copyright BlockMen (2013-2015)
+(C) Copyright sofar <sofar@foo-projects.org> (2016)
 
 
 About this mod:
 ~~~~~~~~~~~~~~~
-This mod adds two different styles of 3D torches to Minetest, by default in Minetest style (flames are animated textures).
-The second style is Minecraft like, so flames are "animated" by using particles
+This mod changes the default torch drawtype from "torchlike" to "mesh",
+giving the torch a three dimensional appearance. The mesh contains the
+proper pixel mapping to make the animation appear as a particle above
+the torch, while in fact the animation is just the texture of the mesh.
 
-Minetest styled:
-Those torches use the same textures as the 2D torch, so its fully compatible with Texture Packs. By default ceiling torches
-are removed and cannot be placed aswell. You can change this behavior by adding "torches_enable_ceiling = true" to your minetest.conf
-Furthermore this style is more server traffic friendly, so it is enabled by default
-
-Minecraft styled:
-Those torches have a non-animated texture and needs to be supported by Texture Packs (currently most don't support this mod).
-"Animation" is done like in Minecraft with particles, which cause (in the current implementation in the Minetest engine)
-some amount of traffic and can cause lags at slow connections. The rate and distance when particles are send is configurable
-in the first lines of "mc_style.lua". Enable this style by adding "torches_style = minecraft" to your minetest.conf. Note that
-the ceiling setting is ignored with this style.
-
-More informations:
-Both styles convert existing torches to the new style. Keep in mind that by default ceiling torches get removed!
+Originally, this mod created in-game alternatives with several
+draw styles.  The alternatives have been removed and instead of
+providing alternate nodes, this mod now directly modifies the existing
+nodes. Conversion from the wallmounted style is done through an LBM.
 
 
 License:
