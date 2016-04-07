@@ -22,6 +22,7 @@ minetest.register_node(":default:torch", {
 		wall_top = {-1/16, -2/16, -1/16, 1/16, 0.5, 1/16},
 		wall_bottom = {-1/16, -0.5, -1/16, 1/16, 2/16, 1/16},
 	},
+	sounds = default.node_sound_wood_defaults(),
 	on_place = function(itemstack, placer, pointed_thing)
 		local above = pointed_thing.above
 		local under = pointed_thing.under
@@ -63,6 +64,7 @@ minetest.register_node(":default:torch_wall", {
 		wall_bottom = {-0.1, -0.5, -0.1, 0.1, 0.1, 0.1},
 		wall_side = {-0.5, -0.3, -0.1, -0.2, 0.3, 0.1},
 	},
+	sounds = default.node_sound_wood_defaults(),
 })
 
 minetest.register_lbm({
