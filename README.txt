@@ -18,6 +18,12 @@ draw styles.  The alternatives have been removed and instead of
 providing alternate nodes, this mod now directly modifies the existing
 nodes. Conversion from the wallmounted style is done through an LBM.
 
+The wield light part is inspired, but not copied from "walking light",
+a mod by "echo". After looking at the code I decided to implement
+it from scratch as I found it to be too resource intensive and not
+implemented efficiently enough. Still, echo deserves the credit for
+the excellent idea.
+
 
 License:
 ~~~~~~~~
@@ -25,11 +31,12 @@ License:
 
 Textures and Meshes/Models:
 CC-BY 3.0 BlockMen
+Note that the models were entirely done from scratch by sofar.
 
 Code:
 Licensed under the GNU LGPL version 2.1 or higher.
-You can redistribute it and/or modify it under 
-the terms of the GNU Lesser General Public License 
+You can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation;
 
 You should have received a copy of the GNU Lesser General Public
