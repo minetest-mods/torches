@@ -73,10 +73,13 @@ minetest.register_node(":default:torch_wall", {
 
 minetest.register_lbm({
 	name = "torches:convert_wallmounted",
-	nodenames = "default:torch",
+	nodenames = {"default:torch", "torches:floor", "torches:wall"},
 	action = function(pos, node)
 		if node.param2 >= 2 then
 			minetest.set_node(pos, {name = "default:torch_wall",
+				param2 = node.param2})
+		else
+			minetest.set_node(pos, {name = "default:torch",
 				param2 = node.param2})
 		end
 	end
