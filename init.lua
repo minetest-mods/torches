@@ -111,7 +111,11 @@ local torchlight = {}
 local playerlist = {}
 
 local function wields_torch(player)
-	return player:get_wielded_item():get_name() == "default:torch"
+	local item = player:get_wielded_item()
+	if not item then
+		return false
+	end
+	return item:get_name() == "default:torch"
 end
 
 local function wielded_torch(name)
