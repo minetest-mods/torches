@@ -111,6 +111,9 @@ local torchlight = {}
 local playerlist = {}
 
 local function wields_torch(player)
+	if not player then
+		return false
+	end
 	local item = player:get_wielded_item()
 	if not item then
 		return false
