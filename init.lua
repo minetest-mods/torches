@@ -143,7 +143,13 @@ local function place_torchlight(pos)
 	local name = minetest.get_node(pos).name
 	if name == "torches:torchlight" then
 		return true
-	elseif name == "air" then
+	end
+	if (minetest.get_node_light(pos) or 0) > 11 then
+		-- no reason to place torch here, so save a bunch
+		-- of node updates this way
+		return false
+	end
+	if name == "air" then
 		minetest.set_node(pos, {name = "torches:torchlight"})
 		return true
 	end
