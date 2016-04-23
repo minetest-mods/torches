@@ -174,8 +174,6 @@ minetest.register_on_leaveplayer(function(player)
 	playerlist[name] = nil
 end)
 
-local torchlight_update_interval = minetest.setting_get("torchlight_update_interval") or 0.25
-
 local function update_torchlight(dtime)
 	for name, _ in pairs(playerlist) do
 		local player = minetest.get_player_by_name(name)
