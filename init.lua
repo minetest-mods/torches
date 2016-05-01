@@ -135,7 +135,7 @@ end
 
 local function remove_torchlight(pos)
 	if is_torchlight(pos) then
-		minetest.remove_node(pos)
+		minetest.swap_node(pos, {name = "air"})
 	end
 end
 
@@ -150,7 +150,7 @@ local function place_torchlight(pos)
 		return false
 	end
 	if name == "air" then
-		minetest.set_node(pos, {name = "torches:torchlight"})
+		minetest.swap_node(pos, {name = "torches:torchlight"})
 		return true
 	end
 	return false
