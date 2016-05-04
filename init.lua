@@ -167,7 +167,8 @@ end)
 
 minetest.register_on_leaveplayer(function(player)
 	local name = player:get_player_name()
-	if wielded_torch(name) then
+	-- don't look at wielded() here, it's likely invalid
+	if torchlight[name] then
 		remove_torchlight(torchlight[name])
 		torchlight[name] = nil
 	end
