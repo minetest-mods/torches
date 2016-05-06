@@ -175,6 +175,12 @@ minetest.register_on_leaveplayer(function(player)
 	playerlist[name] = nil
 end)
 
+minetest.register_on_shutdown(function()
+	for i, _ in pairs(torchlight) do
+		remove_torchlight(torchlight[i])
+	end
+end)
+
 local function update_torchlight(dtime)
 	for name, _ in pairs(playerlist) do
 		local player = minetest.get_player_by_name(name)
