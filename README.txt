@@ -24,6 +24,9 @@ it from scratch as I found it to be too resource intensive and not
 implemented efficiently enough. Still, echo deserves the credit for
 the excellent idea.
 
+Torches is meant for minetest-0.4.14, and does not directly support
+older minetest releases. You'll need a recent git, or nightly build.
+
 
 License:
 ~~~~~~~~
