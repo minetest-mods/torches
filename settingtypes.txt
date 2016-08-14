@@ -1,0 +1,6 @@
+#   This lights you up if you hold a torch in your hand.
+#   Disableing this can speed up your server.
+torches_wieldlight_enable (Enable torche wield light) bool false
+
+#   This is the interval for updating the wield light of torches.
+torches_wieldlight_interval (Wield light update interval) float 2.5
