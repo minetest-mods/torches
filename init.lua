@@ -102,10 +102,10 @@ minetest.register_lbm({
 -- torch wield light
 --
 
-if not minetest.is_yes(minetest.setting_get("torches_wieldlight_enable") or true) then
+if not minetest.is_yes(minetest.settings:get("torches_wieldlight_enable") or true) then
 	return
 end
-local torchlight_update_interval = minetest.setting_get("torches_wieldlight_interval") or 0.25
+local torchlight_update_interval = minetest.settings:get("torches_wieldlight_interval") or 0.25
 
 minetest.register_node("torches:torchlight", {
 	drawtype = "airlike",
